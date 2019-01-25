@@ -1,0 +1,457 @@
+Finished parsing file /home/aldelsa/recommender_system/model/complete_data.csv
+Parsing completed. Parsed 100 lines in 2.53866 secs.
+------------------------------------------------------
+Inferred types from first 100 line(s) of file as 
+column_type_hints=[int,int,int,str]
+If parsing fails due to incorrect types, you can correct
+the inferred type list above and pass it to read_csv in
+the column_type_hints argument
+------------------------------------------------------
+Read 2148186 lines. Lines per second: 854727
+Read 14558034 lines. Lines per second: 1.7397e+06
+Read 26856129 lines. Lines per second: 1.89583e+06
+Read 39154167 lines. Lines per second: 1.95282e+06
+Read 51452003 lines. Lines per second: 1.99864e+06
+Read 63412526 lines. Lines per second: 2.01473e+06
+Read 73275122 lines. Lines per second: 2.00672e+06
+Read 85110314 lines. Lines per second: 2.01506e+06
+Read 96945535 lines. Lines per second: 2.01674e+06
+Finished parsing file /home/aldelsa/recommender_system/model/complete_data.csv
+Parsing completed. Parsed 100480507 lines in 49.1075 secs.
+Preparing data set.
+    Data has 99258559 observations with 480169 users and 17770 items.
+    Data prepared in: 221.672s
+Training ranking_factorization_recommender for recommendations.
++--------------------------------+--------------------------------------------------+----------+
+| Parameter                      | Description                                      | Value    |
++--------------------------------+--------------------------------------------------+----------+
+| num_factors                    | Factor Dimension                                 | 32       |
+| regularization                 | L2 Regularization on Factors                     | 1e-09    |
+| solver                         | Solver used for training                         | adagrad  |
+| linear_regularization          | L2 Regularization on Linear Coefficients         | 1e-09    |
+| ranking_regularization         | Rank-based Regularization Weight                 | 0.25     |
+| max_iterations                 | Maximum Number of Iterations                     | 25       |
++--------------------------------+--------------------------------------------------+----------+
+  Optimizing model using SGD; tuning step size.
+  Using 12407319 / 99258559 points for tuning the step size.
++---------+-------------------+------------------------------------------+
+| Attempt | Initial Step Size | Estimated Objective Value                |
++---------+-------------------+------------------------------------------+
+| 0       | 16.6667           | Not Viable                               |
+| 1       | 4.16667           | Not Viable                               |
+| 2       | 1.04167           | 1.65425                                  |
+| 3       | 0.520833          | 1.17305                                  |
+| 4       | 0.260417          | 0.934074                                 |
+| 5       | 0.130208          | 0.867765                                 |
+| 6       | 0.0651042         | 0.950716                                 |
+| 7       | 0.0325521         | 1.20888                                  |
+| 8       | 0.016276          | 1.45893                                  |
++---------+-------------------+------------------------------------------+
+| Final   | 0.130208          | 0.867765                                 |
++---------+-------------------+------------------------------------------+
+Starting Optimization.
++---------+--------------+-------------------+-----------------------+-------------+
+| Iter.   | Elapsed Time | Approx. Objective | Approx. Training RMSE | Step Size   |
++---------+--------------+-------------------+-----------------------+-------------+
+| Initial | 129us        | 2.30907           | 1.08522               |             |
++---------+--------------+-------------------+-----------------------+-------------+
+| 1       | 10m 52s      | 1.17502           | 0.924122              | 0.130208    |
+| 2       | 21m 23s      | 1.04358           | 0.87088               | 0.130208    |
+| 3       | 31m 56s      | 0.994178          | 0.851605              | 0.130208    |
+| 4       | 42m 13s      | 0.970617          | 0.842012              | 0.130208    |
+| 5       | 52m 6s       | 0.95663           | 0.836225              | 0.130208    |
+| 7       | 1h 11m       | 0.941564          | 0.829182              | 0.130208    |
+| 8       | 1h 21m       | 0.936608          | 0.826658              | 0.130208    |
+| 9       | 1h 31m       | 0.93274           | 0.824987              | 0.130208    |
+| 10      | 1h 41m       | 0.929519          | 0.823205              | 0.130208    |
+| 11      | 1h 51m       | 0.926885          | 0.822004              | 0.130208    |
+| 12      | 2h 1m        | 0.9244            | 0.820559              | 0.130208    |
+| 13      | 2h 11m       | 0.922539          | 0.820227              | 0.130208    |
+| 14      | 2h 21m       | 0.920705          | 0.818885              | 0.130208    |
+| 15      | 2h 31m       | 0.919137          | 0.818295              | 0.130208    |
+| 16      | 2h 41m       | 0.917704          | 0.817461              | 0.130208    |
+| 17      | 2h 51m       | 0.916471          | 0.816738              | 0.130208    |
+| 18      | 3h 1m        | 0.915311          | 0.816291              | 0.130208    |
+| 19      | 3h 11m       | 0.914101          | 0.815981              | 0.130208    |
+| 20      | 3h 21m       | 0.913234          | 0.815267              | 0.130208    |
+| 21      | 3h 31m       | 0.912416          | 0.814771              | 0.130208    |
+| 22      | 3h 40m       | 0.91151           | 0.814386              | 0.130208    |
+| 23      | 3h 49m       | 0.910797          | 0.814241              | 0.130208    |
+| 24      | 3h 58m       | 0.910073          | 0.813636              | 0.130208    |
+| 25      | 4h 7m        | 0.909396          | 0.813329              | 0.130208    |
++---------+--------------+-------------------+-----------------------+-------------+
+Optimization Complete: Maximum number of passes through the data reached.
+Computing final objective value and training RMSE.
+       Final objective value: 0.909037
+       Final training RMSE: 0.805634
+recommendations finished on 1000/315075 queries. users per second: 144.699
+recommendations finished on 2000/315075 queries. users per second: 145.707
+recommendations finished on 3000/315075 queries. users per second: 145.757
+recommendations finished on 4000/315075 queries. users per second: 145.817
+recommendations finished on 5000/315075 queries. users per second: 145.876
+recommendations finished on 6000/315075 queries. users per second: 145.584
+recommendations finished on 7000/315075 queries. users per second: 145.569
+recommendations finished on 8000/315075 queries. users per second: 145.599
+recommendations finished on 9000/315075 queries. users per second: 145.815
+recommendations finished on 10000/315075 queries. users per second: 145.818
+recommendations finished on 11000/315075 queries. users per second: 145.817
+recommendations finished on 12000/315075 queries. users per second: 145.372
+recommendations finished on 13000/315075 queries. users per second: 145.376
+recommendations finished on 14000/315075 queries. users per second: 145.377
+recommendations finished on 15000/315075 queries. users per second: 145.289
+recommendations finished on 16000/315075 queries. users per second: 145.33
+recommendations finished on 17000/315075 queries. users per second: 145.372
+recommendations finished on 18000/315075 queries. users per second: 145.235
+recommendations finished on 19000/315075 queries. users per second: 145.235
+recommendations finished on 20000/315075 queries. users per second: 145.234
+recommendations finished on 21000/315075 queries. users per second: 145.233
+recommendations finished on 22000/315075 queries. users per second: 145.257
+recommendations finished on 23000/315075 queries. users per second: 145.312
+recommendations finished on 24000/315075 queries. users per second: 145.369
+recommendations finished on 25000/315075 queries. users per second: 145.297
+recommendations finished on 26000/315075 queries. users per second: 145.07
+recommendations finished on 27000/315075 queries. users per second: 144.709
+recommendations finished on 28000/315075 queries. users per second: 144.557
+recommendations finished on 29000/315075 queries. users per second: 144.461
+recommendations finished on 30000/315075 queries. users per second: 144.304
+recommendations finished on 31000/315075 queries. users per second: 144.208
+recommendations finished on 32000/315075 queries. users per second: 144.076
+recommendations finished on 33000/315075 queries. users per second: 143.965
+recommendations finished on 34000/315075 queries. users per second: 143.992
+recommendations finished on 35000/315075 queries. users per second: 144.029
+recommendations finished on 36000/315075 queries. users per second: 144.053
+recommendations finished on 37000/315075 queries. users per second: 144.125
+recommendations finished on 38000/315075 queries. users per second: 144.152
+recommendations finished on 39000/315075 queries. users per second: 144.177
+recommendations finished on 40000/315075 queries. users per second: 144.229
+recommendations finished on 41000/315075 queries. users per second: 144.291
+recommendations finished on 42000/315075 queries. users per second: 144.299
+recommendations finished on 43000/315075 queries. users per second: 144.346
+recommendations finished on 44000/315075 queries. users per second: 144.397
+recommendations finished on 45000/315075 queries. users per second: 144.447
+recommendations finished on 46000/315075 queries. users per second: 144.468
+recommendations finished on 47000/315075 queries. users per second: 144.464
+recommendations finished on 48000/315075 queries. users per second: 144.445
+recommendations finished on 49000/315075 queries. users per second: 144.461
+recommendations finished on 50000/315075 queries. users per second: 144.526
+recommendations finished on 51000/315075 queries. users per second: 144.563
+recommendations finished on 52000/315075 queries. users per second: 144.589
+recommendations finished on 53000/315075 queries. users per second: 144.615
+recommendations finished on 54000/315075 queries. users per second: 144.643
+recommendations finished on 55000/315075 queries. users per second: 144.618
+recommendations finished on 56000/315075 queries. users per second: 144.641
+recommendations finished on 57000/315075 queries. users per second: 144.657
+recommendations finished on 58000/315075 queries. users per second: 144.668
+recommendations finished on 59000/315075 queries. users per second: 144.706
+recommendations finished on 60000/315075 queries. users per second: 144.715
+recommendations finished on 61000/315075 queries. users per second: 144.731
+recommendations finished on 62000/315075 queries. users per second: 144.754
+recommendations finished on 63000/315075 queries. users per second: 144.778
+recommendations finished on 64000/315075 queries. users per second: 144.797
+recommendations finished on 65000/315075 queries. users per second: 144.804
+recommendations finished on 66000/315075 queries. users per second: 144.836
+recommendations finished on 67000/315075 queries. users per second: 144.833
+recommendations finished on 68000/315075 queries. users per second: 144.859
+recommendations finished on 69000/315075 queries. users per second: 144.879
+recommendations finished on 70000/315075 queries. users per second: 144.888
+recommendations finished on 71000/315075 queries. users per second: 144.902
+recommendations finished on 72000/315075 queries. users per second: 144.904
+recommendations finished on 73000/315075 queries. users per second: 144.921
+recommendations finished on 74000/315075 queries. users per second: 144.905
+recommendations finished on 75000/315075 queries. users per second: 144.915
+recommendations finished on 76000/315075 queries. users per second: 144.922
+recommendations finished on 77000/315075 queries. users per second: 144.938
+recommendations finished on 78000/315075 queries. users per second: 144.952
+recommendations finished on 79000/315075 queries. users per second: 144.96
+recommendations finished on 80000/315075 queries. users per second: 144.962
+recommendations finished on 81000/315075 queries. users per second: 144.963
+recommendations finished on 82000/315075 queries. users per second: 144.979
+recommendations finished on 83000/315075 queries. users per second: 145.002
+recommendations finished on 84000/315075 queries. users per second: 145.015
+recommendations finished on 85000/315075 queries. users per second: 145.039
+recommendations finished on 86000/315075 queries. users per second: 145.031
+recommendations finished on 87000/315075 queries. users per second: 145.017
+recommendations finished on 88000/315075 queries. users per second: 145.018
+recommendations finished on 89000/315075 queries. users per second: 145.026
+recommendations finished on 90000/315075 queries. users per second: 145.042
+recommendations finished on 91000/315075 queries. users per second: 145.043
+recommendations finished on 92000/315075 queries. users per second: 145.049
+recommendations finished on 93000/315075 queries. users per second: 145.049
+recommendations finished on 94000/315075 queries. users per second: 145.044
+recommendations finished on 95000/315075 queries. users per second: 145.05
+recommendations finished on 96000/315075 queries. users per second: 145.062
+recommendations finished on 97000/315075 queries. users per second: 145.073
+recommendations finished on 98000/315075 queries. users per second: 145.089
+recommendations finished on 99000/315075 queries. users per second: 145.094
+recommendations finished on 100000/315075 queries. users per second: 145.105
+recommendations finished on 101000/315075 queries. users per second: 145.12
+recommendations finished on 102000/315075 queries. users per second: 145.125
+recommendations finished on 103000/315075 queries. users per second: 145.09
+recommendations finished on 104000/315075 queries. users per second: 144.985
+recommendations finished on 105000/315075 queries. users per second: 144.862
+recommendations finished on 106000/315075 queries. users per second: 144.789
+recommendations finished on 107000/315075 queries. users per second: 144.731
+recommendations finished on 108000/315075 queries. users per second: 144.681
+recommendations finished on 109000/315075 queries. users per second: 144.584
+recommendations finished on 110000/315075 queries. users per second: 144.492
+recommendations finished on 111000/315075 queries. users per second: 144.412
+recommendations finished on 112000/315075 queries. users per second: 144.314
+recommendations finished on 113000/315075 queries. users per second: 144.235
+recommendations finished on 114000/315075 queries. users per second: 144.157
+recommendations finished on 115000/315075 queries. users per second: 144.061
+recommendations finished on 116000/315075 queries. users per second: 143.984
+recommendations finished on 117000/315075 queries. users per second: 143.903
+recommendations finished on 118000/315075 queries. users per second: 143.826
+recommendations finished on 119000/315075 queries. users per second: 143.751
+recommendations finished on 120000/315075 queries. users per second: 143.678
+recommendations finished on 121000/315075 queries. users per second: 143.6
+recommendations finished on 122000/315075 queries. users per second: 143.533
+recommendations finished on 123000/315075 queries. users per second: 143.458
+recommendations finished on 124000/315075 queries. users per second: 143.38
+recommendations finished on 125000/315075 queries. users per second: 143.315
+recommendations finished on 126000/315075 queries. users per second: 143.257
+recommendations finished on 127000/315075 queries. users per second: 143.193
+recommendations finished on 128000/315075 queries. users per second: 143.143
+recommendations finished on 129000/315075 queries. users per second: 143.099
+recommendations finished on 130000/315075 queries. users per second: 143.058
+recommendations finished on 131000/315075 queries. users per second: 143.027
+recommendations finished on 132000/315075 queries. users per second: 142.979
+recommendations finished on 133000/315075 queries. users per second: 142.92
+recommendations finished on 134000/315075 queries. users per second: 142.851
+recommendations finished on 135000/315075 queries. users per second: 142.781
+recommendations finished on 136000/315075 queries. users per second: 142.715
+recommendations finished on 137000/315075 queries. users per second: 142.659
+recommendations finished on 138000/315075 queries. users per second: 142.589
+recommendations finished on 139000/315075 queries. users per second: 142.537
+recommendations finished on 140000/315075 queries. users per second: 142.505
+recommendations finished on 141000/315075 queries. users per second: 142.466
+recommendations finished on 142000/315075 queries. users per second: 142.418
+recommendations finished on 143000/315075 queries. users per second: 142.373
+recommendations finished on 144000/315075 queries. users per second: 142.331
+recommendations finished on 145000/315075 queries. users per second: 142.3
+recommendations finished on 146000/315075 queries. users per second: 142.275
+recommendations finished on 147000/315075 queries. users per second: 142.224
+recommendations finished on 148000/315075 queries. users per second: 142.18
+recommendations finished on 149000/315075 queries. users per second: 142.15
+recommendations finished on 150000/315075 queries. users per second: 142.11
+recommendations finished on 151000/315075 queries. users per second: 142.07
+recommendations finished on 152000/315075 queries. users per second: 142.024
+recommendations finished on 153000/315075 queries. users per second: 141.983
+recommendations finished on 154000/315075 queries. users per second: 141.948
+recommendations finished on 155000/315075 queries. users per second: 141.914
+recommendations finished on 156000/315075 queries. users per second: 141.872
+recommendations finished on 157000/315075 queries. users per second: 141.832
+recommendations finished on 158000/315075 queries. users per second: 141.811
+recommendations finished on 159000/315075 queries. users per second: 141.77
+recommendations finished on 160000/315075 queries. users per second: 141.73
+recommendations finished on 161000/315075 queries. users per second: 141.699
+recommendations finished on 162000/315075 queries. users per second: 141.667
+recommendations finished on 163000/315075 queries. users per second: 141.629
+recommendations finished on 164000/315075 queries. users per second: 141.595
+recommendations finished on 165000/315075 queries. users per second: 141.564
+recommendations finished on 166000/315075 queries. users per second: 141.53
+recommendations finished on 167000/315075 queries. users per second: 141.513
+recommendations finished on 168000/315075 queries. users per second: 141.499
+recommendations finished on 169000/315075 queries. users per second: 141.452
+recommendations finished on 170000/315075 queries. users per second: 141.413
+recommendations finished on 171000/315075 queries. users per second: 141.369
+recommendations finished on 172000/315075 queries. users per second: 141.328
+recommendations finished on 173000/315075 queries. users per second: 141.297
+recommendations finished on 174000/315075 queries. users per second: 141.274
+recommendations finished on 175000/315075 queries. users per second: 141.239
+recommendations finished on 176000/315075 queries. users per second: 141.222
+recommendations finished on 177000/315075 queries. users per second: 141.195
+recommendations finished on 178000/315075 queries. users per second: 141.181
+recommendations finished on 179000/315075 queries. users per second: 141.167
+recommendations finished on 180000/315075 queries. users per second: 141.154
+recommendations finished on 181000/315075 queries. users per second: 141.144
+recommendations finished on 182000/315075 queries. users per second: 141.132
+recommendations finished on 183000/315075 queries. users per second: 141.122
+recommendations finished on 184000/315075 queries. users per second: 141.116
+recommendations finished on 185000/315075 queries. users per second: 141.11
+recommendations finished on 186000/315075 queries. users per second: 141.108
+recommendations finished on 187000/315075 queries. users per second: 141.102
+recommendations finished on 188000/315075 queries. users per second: 141.094
+recommendations finished on 189000/315075 queries. users per second: 141.074
+recommendations finished on 190000/315075 queries. users per second: 141.056
+recommendations finished on 191000/315075 queries. users per second: 141.039
+recommendations finished on 192000/315075 queries. users per second: 141.03
+recommendations finished on 193000/315075 queries. users per second: 141.017
+recommendations finished on 194000/315075 queries. users per second: 141.01
+recommendations finished on 195000/315075 queries. users per second: 140.997
+recommendations finished on 196000/315075 queries. users per second: 140.977
+recommendations finished on 197000/315075 queries. users per second: 140.964
+recommendations finished on 198000/315075 queries. users per second: 140.959
+recommendations finished on 199000/315075 queries. users per second: 140.956
+recommendations finished on 200000/315075 queries. users per second: 140.952
+recommendations finished on 201000/315075 queries. users per second: 140.943
+recommendations finished on 202000/315075 queries. users per second: 140.934
+recommendations finished on 203000/315075 queries. users per second: 140.932
+recommendations finished on 204000/315075 queries. users per second: 140.922
+recommendations finished on 205000/315075 queries. users per second: 140.918
+recommendations finished on 206000/315075 queries. users per second: 140.911
+recommendations finished on 207000/315075 queries. users per second: 140.906
+recommendations finished on 208000/315075 queries. users per second: 140.904
+recommendations finished on 209000/315075 queries. users per second: 140.906
+recommendations finished on 210000/315075 queries. users per second: 140.911
+recommendations finished on 211000/315075 queries. users per second: 140.916
+recommendations finished on 212000/315075 queries. users per second: 140.906
+recommendations finished on 213000/315075 queries. users per second: 140.897
+recommendations finished on 214000/315075 queries. users per second: 140.899
+recommendations finished on 215000/315075 queries. users per second: 140.903
+recommendations finished on 216000/315075 queries. users per second: 140.9
+recommendations finished on 217000/315075 queries. users per second: 140.894
+recommendations finished on 218000/315075 queries. users per second: 140.887
+recommendations finished on 219000/315075 queries. users per second: 140.884
+recommendations finished on 220000/315075 queries. users per second: 140.876
+recommendations finished on 221000/315075 queries. users per second: 140.869
+recommendations finished on 222000/315075 queries. users per second: 140.852
+recommendations finished on 223000/315075 queries. users per second: 140.831
+recommendations finished on 224000/315075 queries. users per second: 140.814
+recommendations finished on 225000/315075 queries. users per second: 140.796
+recommendations finished on 226000/315075 queries. users per second: 140.778
+recommendations finished on 227000/315075 queries. users per second: 140.76
+recommendations finished on 228000/315075 queries. users per second: 140.747
+recommendations finished on 229000/315075 queries. users per second: 140.734
+recommendations finished on 230000/315075 queries. users per second: 140.723
+recommendations finished on 231000/315075 queries. users per second: 140.713
+recommendations finished on 232000/315075 queries. users per second: 140.703
+recommendations finished on 233000/315075 queries. users per second: 140.693
+recommendations finished on 234000/315075 queries. users per second: 140.679
+recommendations finished on 235000/315075 queries. users per second: 140.666
+recommendations finished on 236000/315075 queries. users per second: 140.652
+recommendations finished on 237000/315075 queries. users per second: 140.641
+recommendations finished on 238000/315075 queries. users per second: 140.63
+recommendations finished on 239000/315075 queries. users per second: 140.618
+recommendations finished on 240000/315075 queries. users per second: 140.607
+recommendations finished on 241000/315075 queries. users per second: 140.597
+recommendations finished on 242000/315075 queries. users per second: 140.589
+recommendations finished on 243000/315075 queries. users per second: 140.583
+recommendations finished on 244000/315075 queries. users per second: 140.573
+recommendations finished on 245000/315075 queries. users per second: 140.566
+recommendations finished on 246000/315075 queries. users per second: 140.554
+recommendations finished on 247000/315075 queries. users per second: 140.55
+recommendations finished on 248000/315075 queries. users per second: 140.541
+recommendations finished on 249000/315075 queries. users per second: 140.531
+recommendations finished on 250000/315075 queries. users per second: 140.511
+recommendations finished on 251000/315075 queries. users per second: 140.494
+recommendations finished on 252000/315075 queries. users per second: 140.482
+recommendations finished on 253000/315075 queries. users per second: 140.469
+recommendations finished on 254000/315075 queries. users per second: 140.453
+recommendations finished on 255000/315075 queries. users per second: 140.435
+recommendations finished on 256000/315075 queries. users per second: 140.408
+recommendations finished on 257000/315075 queries. users per second: 140.394
+recommendations finished on 258000/315075 queries. users per second: 140.382
+recommendations finished on 259000/315075 queries. users per second: 140.366
+recommendations finished on 260000/315075 queries. users per second: 140.352
+recommendations finished on 261000/315075 queries. users per second: 140.338
+recommendations finished on 262000/315075 queries. users per second: 140.325
+recommendations finished on 263000/315075 queries. users per second: 140.313
+recommendations finished on 264000/315075 queries. users per second: 140.297
+recommendations finished on 265000/315075 queries. users per second: 140.285
+recommendations finished on 266000/315075 queries. users per second: 140.27
+recommendations finished on 267000/315075 queries. users per second: 140.262
+recommendations finished on 268000/315075 queries. users per second: 140.25
+recommendations finished on 269000/315075 queries. users per second: 140.241
+recommendations finished on 270000/315075 queries. users per second: 140.234
+recommendations finished on 271000/315075 queries. users per second: 140.221
+recommendations finished on 272000/315075 queries. users per second: 140.21
+recommendations finished on 273000/315075 queries. users per second: 140.196
+recommendations finished on 274000/315075 queries. users per second: 140.186
+recommendations finished on 275000/315075 queries. users per second: 140.175
+recommendations finished on 276000/315075 queries. users per second: 140.169
+recommendations finished on 277000/315075 queries. users per second: 140.159
+recommendations finished on 278000/315075 queries. users per second: 140.151
+recommendations finished on 279000/315075 queries. users per second: 140.138
+recommendations finished on 280000/315075 queries. users per second: 140.122
+recommendations finished on 281000/315075 queries. users per second: 140.107
+recommendations finished on 282000/315075 queries. users per second: 140.102
+recommendations finished on 283000/315075 queries. users per second: 140.094
+recommendations finished on 284000/315075 queries. users per second: 140.09
+recommendations finished on 285000/315075 queries. users per second: 140.085
+recommendations finished on 286000/315075 queries. users per second: 140.082
+recommendations finished on 287000/315075 queries. users per second: 140.069
+recommendations finished on 288000/315075 queries. users per second: 140.054
+recommendations finished on 289000/315075 queries. users per second: 140.055
+recommendations finished on 290000/315075 queries. users per second: 140.052
+recommendations finished on 291000/315075 queries. users per second: 140.045
+recommendations finished on 292000/315075 queries. users per second: 140.041
+recommendations finished on 293000/315075 queries. users per second: 140.032
+recommendations finished on 294000/315075 queries. users per second: 140.025
+recommendations finished on 295000/315075 queries. users per second: 140.015
+recommendations finished on 296000/315075 queries. users per second: 140.009
+recommendations finished on 297000/315075 queries. users per second: 140.005
+recommendations finished on 298000/315075 queries. users per second: 140.003
+recommendations finished on 299000/315075 queries. users per second: 139.987
+recommendations finished on 300000/315075 queries. users per second: 139.978
+recommendations finished on 301000/315075 queries. users per second: 139.974
+recommendations finished on 302000/315075 queries. users per second: 139.974
+recommendations finished on 303000/315075 queries. users per second: 139.975
+recommendations finished on 304000/315075 queries. users per second: 139.969
+recommendations finished on 305000/315075 queries. users per second: 139.967
+recommendations finished on 306000/315075 queries. users per second: 139.961
+recommendations finished on 307000/315075 queries. users per second: 139.953
+recommendations finished on 308000/315075 queries. users per second: 139.943
+recommendations finished on 309000/315075 queries. users per second: 139.936
+recommendations finished on 310000/315075 queries. users per second: 139.928
+recommendations finished on 311000/315075 queries. users per second: 139.921
+recommendations finished on 312000/315075 queries. users per second: 139.914
+recommendations finished on 313000/315075 queries. users per second: 139.907
+recommendations finished on 314000/315075 queries. users per second: 139.899
+recommendations finished on 315000/315075 queries. users per second: 139.89
+
+Precision and recall summary statistics by cutoff
++--------+------------------+------------------+
+| cutoff |  mean_precision  |   mean_recall    |
++--------+------------------+------------------+
+|   1    | 0.00593509481869 | 0.00144197367433 |
+|   2    | 0.00609537411727 | 0.00307201401006 |
+|   3    | 0.00624824777169 | 0.00483366586417 |
+|   4    | 0.00639212885821 | 0.00659871975481 |
+|   5    | 0.00656922954852 | 0.00850164760403 |
+|   6    | 0.00676875876114 | 0.0104492901543  |
+|   7    | 0.00703143242539 | 0.0127084532474  |
+|   8    | 0.00728398000476 | 0.0149774582652  |
+|   9    | 0.0075541096917  | 0.0174908449708  |
+|   10   | 0.00782226454019 | 0.0202105298568  |
++--------+------------------+------------------+
+[10 rows x 3 columns]
+
+
+Overall RMSE: 0.918269266081
+
+Per User RMSE (best)
++---------+-------+-------------------+
+|  userId | count |        rmse       |
++---------+-------+-------------------+
+| 1933736 |   1   | 1.89605966261e-05 |
++---------+-------+-------------------+
+[1 rows x 3 columns]
+
+
+Per User RMSE (worst)
++---------+-------+--------------+
+|  userId | count |     rmse     |
++---------+-------+--------------+
+| 1640489 |   1   | 6.3679918412 |
++---------+-------+--------------+
+[1 rows x 3 columns]
+
+
+Per Item RMSE (best)
++---------+-------+----------------+
+| movieId | count |      rmse      |
++---------+-------+----------------+
+|   8438  |  4221 | 0.624369405608 |
++---------+-------+----------------+
+[1 rows x 3 columns]
+
+
+Per Item RMSE (worst)
++---------+-------+---------------+
+| movieId | count |      rmse     |
++---------+-------+---------------+
+|  16576  |   22  | 2.43564821999 |
++---------+-------+---------------+
+[1 rows x 3 columns]
+

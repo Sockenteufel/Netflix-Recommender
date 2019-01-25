@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommender Movies</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="tables.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<br>
+	<center>
+		<h1>Recommender System using Netflix's Dataset</h1>
+		<h4>Created by Alejandro Delgado to Data Mining course</h4>
+		<a href="./log.txt" target="_blank" >About the model</a>
+		<br><br><hr><br>
+		<h4>Examples Movies :</h4>
+		<table class="tg" style="undefined;table-layout: fixed; width: 495px">
+			<colgroup>
+				<col style="width: 96px">
+				<col style="width: 316px">
+				<col style="width: 83px">
+			</colgroup>
+			<tr>
+				<th class="tg-rt4i">Id</th>
+				<th class="tg-rt4i">Title</th>
+				<th class="tg-rt4i">Year</th>
+			</tr>
+			<tr>
+				<td class="tg-g145">5571</td>
+				<td class="tg-g145">Rocky</td>
+				<td class="tg-g145">1976</td>
+			</tr>
+			<tr>
+				<td class="tg-g145">5582</td>
+				<td class="tg-g145">Star Wars: Episode V</td>
+				<td class="tg-g145">1980</td>
+			</tr>
+			<tr>
+				<td class="tg-g145">13673</td>
+				<td class="tg-g145">Toy Story</td>
+				<td class="tg-g145">1995</td>
+			</tr>
+			<tr>
+				<td class="tg-g145">16793</td>
+				<td class="tg-g145">The Exorcist</td>
+				<td class="tg-g145">1973</td>
+			</tr>
+		</table>
+		<br>
+		<a href="movie_titles.txt" target="_blank" >All dataset movies</a>
+		<br><br><br>
+		<form id="my-form">
+			<label>Id Movie: <input type="text" id="id_film" name="id_film" placeholder="Id Movie" />
+			<button type="submit">Recommend</button>
+		</form>
+		<br><br>
+
+		<div id="response">
+			<pre></pre>
+		</div>
+	</center>
+        <script>
+            (function($){
+                function processForm( e ){
+            $.post(
+                'recommender',
+                $(this).serialize(),
+                function( data, textStatus, jQxhr ){
+                    $('#response pre').html( data );
+                 },
+                 'text'
+            )
+                .fail(function( jqXhr, textStatus, errorThrown ){
+                        console.log( errorThrown );
+                });
+
+                e.preventDefault();
+                }
+
+                $('#my-form').submit( processForm );
+            })(jQuery);
+        </script>
+
+</body>
+</html>
